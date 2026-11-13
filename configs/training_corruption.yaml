@@ -1,0 +1,13 @@
+seed_offset: 1000003
+clean_fraction: 0.5
+conditions:
+  gaussian_noise:
+    type: gaussian_noise
+    std: [0.01, 0.04]
+  gaussian_blur:
+    type: gaussian_blur
+    sigma: [0.5, 1.0]
+    kernel_size: [3, 5]
+  contrast_reduction:
+    type: contrast_reduction
+    factor: [0.85, 0.65]

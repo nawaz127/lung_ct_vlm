@@ -1,0 +1,17 @@
+model:
+  identifier: hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224
+  prompt_version: sector07_v1
+  aggregation: mean_then_normalize
+classes:
+  Normal:
+    - A normal chest CT image.
+    - A chest CT scan showing no visible abnormality.
+    - A thoracic CT image with normal lung appearance.
+  Benign:
+    - A chest CT image showing a benign lung abnormality.
+    - A thoracic CT scan with a benign pulmonary lesion.
+    - A lung CT image showing non-malignant pulmonary findings.
+  Malignant:
+    - A chest CT image showing a malignant lung lesion.
+    - A thoracic CT scan with a malignant pulmonary abnormality.
+    - A lung CT image showing malignant findings.

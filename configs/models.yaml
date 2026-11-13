@@ -1,0 +1,15 @@
+models:
+  - name: mobilenet_v3_large
+    pretrained: true
+  - name: efficientnet_b0
+    pretrained: true
+  - name: resnet18
+    pretrained: true
+num_classes: 3
+feature_extraction: supported
+sector_04:
+  input_size: 224
+  input_channels: 3
+  class_mapping: {Normal: 0, Benign: 1, Malignant: 2}
+  classification_head: {type: gap_dropout_linear, dropout: 0.2}
+  freeze_backbone: false

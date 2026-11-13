@@ -1,0 +1,1 @@
+"""Future separate zero-shot VLM prediction evaluation."""

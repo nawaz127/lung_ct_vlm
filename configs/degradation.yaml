@@ -1,0 +1,44 @@
+seed: 20261111
+image_size: [224, 224]
+processing_order:
+  - load
+  - convert_rgb
+  - resize
+  - degrade_in_pixel_domain
+  - tensor
+  - imagenet_normalize
+normalization:
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+conditions:
+  clean: {}
+  gaussian_noise_s1:
+    type: gaussian_noise
+    std: 0.03
+  gaussian_noise_s2:
+    type: gaussian_noise
+    std: 0.08
+  gaussian_noise_s3:
+    type: gaussian_noise
+    std: 0.15
+  gaussian_blur_s1:
+    type: gaussian_blur
+    sigma: 0.8
+    kernel_size: 5
+  gaussian_blur_s2:
+    type: gaussian_blur
+    sigma: 1.5
+    kernel_size: 9
+  gaussian_blur_s3:
+    type: gaussian_blur
+    sigma: 3.0
+    kernel_size: 15
+  contrast_reduction_s1:
+    type: contrast_reduction
+    factor: 0.75
+  contrast_reduction_s2:
+    type: contrast_reduction
+    factor: 0.50
+  contrast_reduction_s3:
+    type: contrast_reduction
+    factor: 0.25

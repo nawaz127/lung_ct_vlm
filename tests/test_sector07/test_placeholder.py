@@ -1,0 +1,1 @@
+"""Sector 07 test placeholder for frozen VLM integration checks."""

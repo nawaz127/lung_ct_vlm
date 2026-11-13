@@ -1,0 +1,6 @@
+project_name: lung_ct_robustness_xai_vlm
+research_title: Robustness and Explainability Evaluation of Lightweight CNNs for Lung CT Abnormality Classification Under Image Quality Degradation
+python_min_version: "3.10"
+random_seed: 42
+device: auto
+class_names: [Normal, Benign, Malignant]

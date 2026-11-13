@@ -1,0 +1,13 @@
+methods: [gradcam, integrated_gradients]
+stability_metrics: [ssim, cosine_similarity, spearman_rank_correlation]
+paired_comparison:
+  attribution_target: clean_image_predicted_class
+  record_actual_predictions: true
+clinical_annotation_available: false
+seed: 20261111
+integrated_gradients:
+  steps: 32
+  baseline: zero_normalized_input
+stability:
+  map_normalization: min_max_per_map
+  flattening: channel_mean_then_row_major

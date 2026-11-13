@@ -1,0 +1,13 @@
+corruptions:
+  gaussian_noise:
+    enabled: true
+    severities: [1, 2, 3]
+  gaussian_blur:
+    enabled: true
+    severities: [1, 2, 3]
+  contrast_reduction:
+    enabled: true
+    severities: [1, 2, 3]
+reproducibility:
+  seed: 42
+  preserve_test_index: true

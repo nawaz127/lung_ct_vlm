@@ -1,0 +1,1 @@
+"""Sector 06 tests."""

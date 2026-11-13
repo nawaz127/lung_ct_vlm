@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and local secrets
+.venv/
+*.env
+!.env.example
+.conda/
+
+# Data, weights, and generated artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/splits/*
+!data/splits/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+!checkpoints/vlm/.gitkeep
+outputs/*
+!outputs/**/
+!outputs/**/.gitkeep
+
+# Additional Conda environment locations
+envs/
+conda-envs/
+.conda-envs/
+
+# Keep generated experiment artifacts out of version control while retaining
+# the directory markers used by the project scaffold.
+outputs/**
+!outputs/**/
+!outputs/**/.gitkeep
+
+# Local research runs and generated analysis artifacts
+experiments/*
+!experiments/.gitkeep
+reports/*
+!reports/.gitkeep
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

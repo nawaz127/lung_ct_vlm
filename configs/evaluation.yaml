@@ -1,0 +1,7 @@
+conditions:
+  clean: true
+  corruption_severities: 3
+metrics:
+  primary: macro_f1
+  additional: [accuracy, balanced_accuracy, macro_precision, macro_recall, per_class_recall, confusion_matrix, roc_auc_ovr]
+efficiency: [parameter_count, model_size, inference_latency, peak_gpu_memory]

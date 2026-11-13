@@ -1,0 +1,1 @@
+"""Future frozen BiomedCLIP loading and provenance recording."""

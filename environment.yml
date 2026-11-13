@@ -1,0 +1,24 @@
+name: lung-ct-robustness
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - numpy
+  - pandas
+  - pillow
+  - pyyaml
+  - scikit-learn
+  - scipy
+  - scikit-image
+  - matplotlib
+  - seaborn
+  - tqdm
+  - pytest
+  - pip:
+      - tensorboard

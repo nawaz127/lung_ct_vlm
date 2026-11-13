@@ -1,0 +1,1 @@
+"""Future corruption pipeline assembly and stable indexing."""

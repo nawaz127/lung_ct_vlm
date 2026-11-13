@@ -1,0 +1,5 @@
+logging:
+  level: INFO
+  output_dir: outputs/logs
+  tensorboard_dir: outputs/logs/tensorboard
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"

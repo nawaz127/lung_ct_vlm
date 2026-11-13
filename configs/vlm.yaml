@@ -1,0 +1,10 @@
+model:
+  name: BiomedCLIP
+  frozen: true
+  checkpoint: null
+  tokenizer: record_at_runtime
+prompts:
+  fixed_before_test_evaluation: true
+  classes: [Normal, Benign, Malignant]
+cache:
+  text_embeddings: outputs/vlm/text_embeddings

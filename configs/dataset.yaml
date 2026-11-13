@@ -1,0 +1,24 @@
+dataset:
+  raw_dir: ${RAW_DATA_DIR:data/raw}
+  metadata_dir: data/metadata
+  image_extensions: [.png, .jpg, .jpeg, .tif, .tiff]
+  recursive: true
+  expected_classes: [Normal, Benign, Malignant]
+  class_aliases:
+    Bengin: Benign
+  historical_counts: {Normal: 416, Benign: 467, Malignant: 1050}
+  preserve_raw_data: true
+  duplicate_detection:
+    enabled: true
+    algorithm: sha256
+    detect_cross_class_duplicates: true
+  audit:
+    fail_on_missing_class: true
+    warn_on_class_imbalance: true
+    warn_on_dimension_variation: true
+split:
+  strategy: stratified_image_level
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+  patient_grouping_available: false

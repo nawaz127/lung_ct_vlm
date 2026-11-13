@@ -1,0 +1,1 @@
+"""Future classification loss configuration."""

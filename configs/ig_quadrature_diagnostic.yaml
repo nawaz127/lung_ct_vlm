@@ -1,0 +1,34 @@
+protocol_name: ig_quadrature_validation
+baseline: zero_normalized_input
+target: clean_image_predicted_class
+device_dtype: float32
+integration_methods:
+  - left
+  - trapezoidal
+  - midpoint
+step_counts:
+  - 32
+  - 64
+  - 128
+  - 256
+  - 512
+gradient_batch_size: 8
+conditions:
+  - clean
+  - gaussian_noise_s1
+  - gaussian_noise_s2
+  - gaussian_noise_s3
+  - gaussian_blur_s1
+  - contrast_reduction_s1
+coverage:
+  run_selection:
+    architectures: [mobilenet_v3_large, efficientnet_b0, resnet18]
+    strategies: [clean_baseline, corruption_aware]
+    seeds: [1]
+  samples: one_deterministic_manifest_sample_plus_matching_known_efficientnet_anomalies
+acceptance:
+  status: proposed_not_approved
+  rationale: >
+    No universal numeric or map-stability threshold is defensible from the
+    current evidence. Completeness error and successive-map similarity must be
+    reported together and reviewed by architecture and condition.

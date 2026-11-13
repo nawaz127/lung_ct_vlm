@@ -1,0 +1,1 @@
+"""Future consistent three-class classifier interface."""

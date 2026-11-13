@@ -1,0 +1,1 @@
+"""Future publication-quality figure and table generation."""

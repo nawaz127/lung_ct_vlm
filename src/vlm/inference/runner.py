@@ -1,0 +1,1 @@
+"""Future memory-aware BiomedCLIP image-text inference."""
